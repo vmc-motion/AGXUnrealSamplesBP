@@ -1,14 +1,37 @@
 # AGXUnrealSamplesBP
 UE project containing sample levels showing how to use 'AGX Dynamics for Unreal' using Blueprint Visual Scripting, without any C++ code.
 
-## Development Environment
+# Development Environment
 
 * Unreal Engine: 5.3
 * AGX Dynamics for Unreal: 1.13.1 (included in project)
 
+# How To Download
+
+# Option A) Download zip file
+1. Click the green button **Code** to open the dropdown menu.
+1. Right click **Download ZIP** in the dropdown menu.
+1. Select **Save Link As...** from the context menu and choose where to save the zip file.
+1. Extract the zip file after it has finished downloading.
+1. Double click **AGXUnrealSamplesBP.uproject** to open the project in Unreal Editor.
+
+<img src="Documentation/Images/HowToDownload.png"/>
+
+# Option B) Clone using git
+1. Install git.
+1. Install git lfs.
+1. Open a terminal in desired root folder and clone by standard means like below.
+   ```
+   git clone https://github.com/vmc-motion/AGXUnrealSamplesBP
+   ```
+1. Double click **AGXUnrealSamplesBP.uproject** to open the project in Unreal Editor.
+
+
 # Sample Levels
 
-Please be aware that the levels below are just simple samples on how to access various functions of AGX Unreal. In a real project, a more sophisticated and thorough design might be necessary.
+Below is a overview of the sample levels included in the project.
+
+Please be aware that the levels below are just simple demonstrations on ways to access various functions of AGX Unreal. In a real project, a more sophisticated and thorough design might be necessary.
 
 ## Target Speed Control
 
@@ -31,7 +54,7 @@ Content/Samples/TargetSpeedControl/L_TargetSpeedControl.umap
 
 ### Contents ###
 
-The level has one BP actor called **BP_TargetSpeedControl_Sample**.
+The level has one BP Class actor called **BP_TargetSpeedControl_Sample**.
 
 The actor consists of two rigid body components, **Body_Base** and **Body_Arm**, which are connected by the hinge component **Hinge_Arm**.
 
