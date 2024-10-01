@@ -1,0 +1,101 @@
+// CFG Definition scheme v 1.0
+
+VertexShader {
+  name STRING
+  file STRING
+	string STRING
+}
+
+// Defines a Fragment shader
+FragmentShader {
+  name STRING // name of the Fragment shader
+  file STRING // file with the shader code
+	string STRING
+}
+
+ShaderProgram {
+  name STRING // unique name of the ShaderProgram
+  vertexShader STRING // refers to a VertexShader
+  fragmentShader STRING // refers to a FragmentShader
+
+  AttribLocation { // Creates an attribute location in the program for vertex data, Tangents, Binormals etc
+    name STRING // name of the attribute, i.e. tangent
+    index INT   // index of the attribute, i.e. 6
+  }
+
+}
+
+ShaderState {
+  name STRING
+  shaderProgram STRING
+  enable 1
+  
+  Uniform {
+    name "texturename"
+    value REAL
+    value INT
+    value VEC2
+    value VEC3
+    value VEC4
+    value [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]
+  }	
+}
+
+Texture {
+	name STRING
+  file STRING
+  
+  isCubeMap INT
+  fileType STRING
+  
+	magFilter STRING // "LINEAR", "LINEAR_MIPMAP_LINEAR", "LINEAR_MIPMAP_NEAREST", "NEAREST", "LINEAR", "NEAREST_MIPMAP_LINEAR"
+	minFilter STRING // "LINEAR", "LINEAR_MIPMAP_LINEAR", "LINEAR_MIPMAP_NEAREST", "NEAREST", "LINEAR", "NEAREST_MIPMAP_LINEAR"
+	anisotropy REAL
+
+	wrap_s INT // CLAMP, CLAMP_TO_EDGE, CLAMP_TO_BORDER, REPEAT, MIRROR
+	wrap_t INT // CLAMP, CLAMP_TO_EDGE, CLAMP_TO_BORDER, REPEAT, MIRROR
+
+}
+
+
+RenderState 
+{
+  name STRING // name of this RenderState
+  shaderState STRING // refers to a ShaderState
+  
+	Texture { // Refers to a Texture
+	  unit INT // which texture unit this texture goes to
+		enable INT // Enable 1/0
+		name STRING // Name of the texture
+		
+    translate VEC3 // Translation of the TextureMatrix
+    scale VEC3 // Scaling of the TextureMatrix
+    rotate VEC3 // Rotation of the TextureMatrix    
+		
+		texGen INT // OBJECT_LINEAR, EYE_LINEAR, SPHERE_MAP, NORMAL_MAP, REFLECTION_MAP
+	}
+	Color {
+	  diffuse VEC4
+		ambient VEC4
+		specular VEC4
+		emissive VEC4 
+		shininess REAL // shininess for phong, 0..
+		alpha REAL // transparency 0 - transparent, 1-opaque
+		
+	}
+
+  // A renderstate can also contain Uniforms
+  // Uniforms specified in the RenderState overrides any uniforms 
+  // with the same name in ShaderState.	
+  Uniform {
+    name "texturename"
+    value REAL
+    value INT
+    value VEC2
+    value VEC3
+    value VEC4
+    value [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]
+  }	
+
+	
+}

@@ -1,0 +1,88 @@
+{
+	"FileVersion": 3,
+	"Version": 20,
+	"VersionName": "1.13.1",
+	"FriendlyName": "AGX Dynamics for Unreal",
+	"Description": "Integration of AGX Dynamics, a professional multi-purpose physics engine for simulators, Virtual Reality (VR), engineering, large scale granular simulations and more, into Unreal Engine.",
+	"Category": "Physics",
+	"CreatedBy": "Algoryx Simulation",
+	"CreatedByURL": "www.algoryx.se",
+	"DocsURL": "https://us.download.algoryx.se/AGXUnreal/documentation/1.13.1/index.html",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/41605aa41cbf47549d678c910f56dc29",
+	"SupportURL": "support@algoryx.se",
+	"EngineVersion": "5.3.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "AGXCommon",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"PlatformDenyList": [
+				"IOS",
+				"Linux"
+			]
+		},
+		{
+			"Name": "AGXUnrealBarrier",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"PlatformDenyList": [
+				"IOS",
+				"Linux"
+			]
+		},
+		{
+			"Name": "AGXUnreal",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"PlatformDenyList": [
+				"IOS",
+				"Linux"
+			]
+		},
+		{
+			"Name": "AGXUnrealEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"PlatformDenyList": [
+				"IOS",
+				"Linux"
+			]
+		},
+		{
+			"Name": "AGXUnrealTests",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			],
+			"PlatformDenyList": [
+				"IOS",
+				"Linux"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		}
+	]
+}

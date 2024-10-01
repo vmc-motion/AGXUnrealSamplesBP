@@ -1,0 +1,27 @@
+{
+  "description": "A generic wood-like material",
+
+  "name": "wood",                // Used for ContactMaterial lookup
+
+  "BulkMaterial" : { 
+    "density":         520,      // Density of a material
+    "youngsModulus":   1.11e10,  // Young's modulus of the material, same as spring coefficient k.
+    "viscosity" :      0.4,      // Bulk viscosity coefficient of the material (1 - restitution coefficient)
+    "damping":         "default" // The value is the time the contact constraint has to fulfill its violation
+  },
+
+  "SurfaceMaterial" : {
+    "roughness":       0.45,     // A unit less parameter that corresponds to the final friction coefficient if calculated automatically
+    "adhesion":        0,        // Adhesive force
+    "adhesiveOverlap": 0,        // Allowed overlap from surface for resting contact
+    "viscosity":       "default" // This parameter tells how dry/wet the surface is. Larger -> Wetter -> creep. Like compliance for friction
+  },
+
+  "WireMaterial" : {
+    "youngsModulusStretch": "default", // Young's modulus for stretching (default: 6E10, valid > 0)
+    "youngsModulusBend":    "default", // Young's modulus for bend resistance (default equal to stretch)
+    "dampingStretch":       "default", // Damping in wire stretch constraints. (default: 0.075, valid > 0)
+    "dampingBend":          "default"  // Damping in wire bend constraints. (default: 0.075, valid > 0)
+  }
+}
+

@@ -1,0 +1,22 @@
+{
+  "description": "Behavior for asphalt-stone interactions",
+
+  "restitution":  [0.6, 0, 0],  // Restitution, directions: [Normal, primary_tangent, secondary_tangent]
+
+  "youngsModulus": 7.12e8,      // YoungsModulus, same as spring coefficient k
+  "damping":       "default",   // Damping, the time the contact constraint has to fulfill its violation
+
+  "friction":     [0.4, 0.4],   // Friction coefficient per direction: [primary, secondary]
+  "wireFriction": [0.4, 0.4],   // Friction coefficients used by wire nodes. [Primary/along wire, Secondary/along contact edge]
+  "viscosity":    ["default", "default"],  // Surface viscosity per direction. [primary, secondary]
+
+  "adhesion":        0,         // Adhesion parameter, i.e., the attractive force between two colliding objects
+  "adhesiveOverlap": 0,         // Adhesive overlap for this surface material
+
+  "impactCompliance":              0.0,    // Compliance used for calculating impact forces by GranularBodySystem
+  "rollingResistanceCoefficient":  0.2,    // Rolling resistance coefficient used by particles from GranularBodySystem
+  "rollingResistanceCompliance":   1e-7,   // ... and compliance parameter.
+  "twistingResistanceCoefficient": 0.005,  // Twisting resistance coefficient used by particles from GranularBodySystem
+  "twistingResistanceCompliance":  1e-7    // ... and compliance parameter.
+}
+
