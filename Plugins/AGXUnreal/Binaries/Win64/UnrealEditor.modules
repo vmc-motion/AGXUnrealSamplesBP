@@ -1,0 +1,11 @@
+{
+	"BuildId": "27405482",
+	"Modules": 
+	{
+		"AGXCommon": "UnrealEditor-AGXCommon.dll",
+		"AGXUnreal": "UnrealEditor-AGXUnreal.dll",
+		"AGXUnrealBarrier": "UnrealEditor-AGXUnrealBarrier.dll",
+		"AGXUnrealEditor": "UnrealEditor-AGXUnrealEditor.dll",
+		"AGXUnrealTests": "UnrealEditor-AGXUnrealTests.dll"
+	}
+}

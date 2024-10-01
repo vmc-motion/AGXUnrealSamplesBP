@@ -47,9 +47,9 @@ SourceArt/**/*.tga
 # Binary Files
 Binaries/*
 
-# UE generated plugin Binary Files, but allow ThirdParty binaries, etc (i.e. AgxDynamics).
-Plugins/*/Binaries/**/UE4*.*
-Plugins/*/Binaries/**/UnrealEditor*.*
+# Because its a BP project, allow Plugin and ThirdParty Binary Files (i.e. AgxDynamics).
+#Plugins/*/Binaries/**/UE4*.*
+#Plugins/*/Binaries/**/UnrealEditor*.*
 !**/ThirdParty/**/*.*
 
 # Builds
