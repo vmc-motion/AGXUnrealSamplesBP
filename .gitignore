@@ -14,7 +14,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -47,7 +46,11 @@ SourceArt/**/*.tga
 
 # Binary Files
 Binaries/*
-Plugins/**/Binaries/*
+
+# UE generated plugin Binary Files, but allow ThirdParty binaries, etc (i.e. AgxDynamics).
+Plugins/*/Binaries/**/UE4*.*
+Plugins/*/Binaries/**/UnrealEditor*.*
+!**/ThirdParty/**/*.*
 
 # Builds
 Build/*
@@ -68,7 +71,12 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-Plugins/**/Intermediate/*
+Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# AGX License file
+*.lic
+*.lfx
+*.rtlfs
